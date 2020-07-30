@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+/* Navigation Bar */
+#nav-bar a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 20px;
+}
+
+#nav-bar a:hover {
+    background-color: #ffffff;
+    color: #333333;
+}
+
+#nav-bar {
+    background-color: #333333;
+    box-sizing: border-box;
+    width: 100%;
+    height: 59px;
+    display: flex;
+    align-items: center;
+}
+
+.push {
+    margin-left: auto;
+}
+/* Navigation Bar */

@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, sans-serif;
+}
+
+body {
+    height: 100%;
+    background-image: url(../images/bg.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Main */
+.err_msg, .suc_msg {
+    font-weight: bolder;
+    width: 100%;
+    text-align: center;
+}
+
+.err_msg {color: tomato;}
+.suc_msg {color: #4CAF50;}
+
+#main-wrap {
+    width: 90vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+#main {
+    display: flex;
+    padding: 8px;
+}
+
+#login, #reg {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.form-head {
+    margin: 10px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+form > input{
+    box-sizing: border-box;
+    padding: 10px;
+    padding-left: 15px;
+    width: 100%;
+    border: #333333 solid 1px;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+form > input[type=submit] {
+    background-color: #333333;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form > input[type=submit]:hover {
+    background-color: #ffffff;
+    color: #333333;
+}
+/* Main */
+
+@media only screen and (orientation: portrait) {
+    #main {
+        flex-direction: column;
+    }
+
+    #login, #reg {
+        width: 100%;
+    }
+}

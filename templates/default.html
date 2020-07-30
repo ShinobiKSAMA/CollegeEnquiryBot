@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AMS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='stylesheets/default.css')}}">
+    {% if request.path == url_for('bot') %}
+        <link rel="stylesheet" href="{{url_for('static', filename='stylesheets/botScreen.css')}}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    {% elif request.path == url_for('dashboard') %}
+        <link rel="stylesheet" href="{{url_for('static', filename='stylesheets/dashboard.css')}}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    {% else %}
+        <link rel="stylesheet" href="{{url_for('static', filename='stylesheets/login.css')}}">
+    {% endif %}
+</head>
+<body>
+    <div id="nav-bar">
+        <a href="/">BVCOE</a>
+        {% if session['user'] %}
+            <a href="/logout" class="push">Logout</a>
+            <a href="/bot" class="active">Chat-Bot</a>
+        {% elif session['admin'] %}
+            <a href="/logout" class="push">Logout</a>
+            <a href="/dashboard" class="active">Dashboard</a>
+        {% else %}
+            <a href="/adm_Login" class="push">Admin Login</a>
+        {% endif %}
+        <a href="#">About</a>
+    </div>
+    {% block content %}{% endblock %}
+</body>
+</html>

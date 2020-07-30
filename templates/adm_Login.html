@@ -1,0 +1,14 @@
+{% extends "default.html" %}
+
+{% block content %}
+    <div id="main-wrap">
+        <p class="err_msg">{{msg}}</p>
+        <div id="main">
+            <form id="login" action="/adm_Login" method="POST">
+                <p class="form-head">Login</p>
+                <input type="text" name="adm" placeholder="adminID" required>
+                <input type="password" name="pass" placeholder="Enter Password" required>
+                <input type="submit" value="Login" name="login">
+            </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends "default.html" %}
+
+{% block content %}
+    <div class="container">
+        <h1>Bharati Vidyapeeth College of Engineering</h1>
+        <div id="chatbox" class="msgBox">
+            <p class="botText">Hello! This is AM Bot</p>
+            {% for msg in chat %}
+            {% if msg[1]==0 %}
+            <p class="userText">{{ msg[0] }}</p>
+            {% else %}
+            <p class="botText">{{ msg[0] }}</p>
+            {% endif %}
+            {% endfor %}
+        </div>
+        <div id="userInput">
+            <input id="textInput" class="textIn" type="text" name="msg" placeholder="Type Your Message Here">
+            <input id="send" class="sendMsg" type="submit" value="Send">
+        </div>
+        <script>
+        function getResponse() {
+            let userText = $("#textInput").val();
+            let userHtml = '<p class="userText">' + userText + '</p>';
+            $("#textInput").val("");
+            $("#chatbox").append(userHtml);
+            $("#chatbox").animate({
+                scrollTop: $('#chatbox')[0].scrollHeight - $('#chatbox')[0].clientHeight
+            });
+            $.get("/get", { msg: userText }).done(function(data) {
+                var botHtml = '<p class="botText">' + data + '</p>';
+                $("#chatbox").append(botHtml);
+                $("#chatbox").animate({
+                    scrollTop: $('#chatbox')[0].scrollHeight - $('#chatbox')[0].clientHeight
+                });
+            });
+        }
+        $("#textInput").keypress(function(e) {
+        //if enter key is pressed
+            if(e.which == 13) {
+                getResponse();
+            }
+        });
+        $("#send").click(function() {
+            getResponse();
+        });
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    </div>
+{% endblock %}

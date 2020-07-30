@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<aiml version="1.0">
+
+<meta name="language" content="en"/>
+  <category>
+    <pattern>RECRUITER</pattern>
+    <template>
+		  <![CDATA[
+        <html>
+        Godrej, IBM, ZYCUS, JSW, TATA,<br/>
+        CSC, JACOBS, GEP, Sciative,<br/>
+        Capgemini, Zeus Learning, Mindcraft,<br/>
+        Pucsoft, etc.
+        </html>
+      ]]>
+	</template>
+  </category>
+  <category>
+    <pattern>RECRUITERS</pattern>
+    <template>
+		  <![CDATA[
+        <html>
+        Godrej, IBM, ZYCUS, JSW, TATA,<br/>
+        CSC, JACOBS, GEP, Sciative,<br/>
+        Capgemini, Zeus Learning, Mindcraft,<br/>
+        Pucsoft, etc.
+        </html>
+      ]]>
+	</template>
+  </category>
+  <category>
+    <pattern>INSTITUTE</pattern>
+    <template>0935</template>
+  </category>
+  <category>
+    <pattern>INSTITUTE CODE</pattern>
+    <template>0935</template>
+  </category>
+  <category>
+    <pattern>CONTACT</pattern>
+    <template>
+      <![CDATA[
+        <html>
+        Tel: 02527273999<br/>
+        Eail: principal@jondhleengg.org
+        </html>
+      ]]>
+    </template>
+  </category>
+  <category>
+    <pattern>CONTACT INFORMATION</pattern>
+    <template>
+      <![CDATA[
+        <html>
+       Tel: 02527273999<br/>
+        Eail: principal@jondhleengg.org
+        </html>
+      ]]>
+    </template>
+  </category>
+  <category>
+    <pattern>FOUNDER INFORMATION</pattern>
+    <template>
+      <![CDATA[
+        <html>
+        Dr. Shivajirao S. Jondhle<br/>
+        Principle: Dr. Sneha Jondhle
+        </html>
+      ]]>
+    </template>
+  </category>
+  <category>
+    <pattern>FOUNDER</pattern>
+    <template>
+      <![CDATA[
+        <html>
+        Dr. Shivajirao S. Jondhle<br/>
+        Principle: Dr. Sneha Jondhle
+        </html>
+      ]]>
+    </template>
+  </category>
+  <category>
+    <pattern>TEACHER TO STUDENT RATIO</pattern>
+    <template>
+      15-20 teachers for each department
+    </template>
+  </category>
+  <category>
+    <pattern>DEADLINES FOR ADMISSIONS AND FINANCIAL AID APPLICATIONS</pattern>
+    <template>
+      You Can Pay The Fee In Installments If Any Financial Problem Is There.
+    </template>
+  </category>
+  <category>
+    <pattern>THE DEADLINES FOR ADMISSIONS AND FINANCIAL AID APPLICATIONS</pattern>
+    <template>
+      You Can Pay The Fee In Installments If Any Financial Problem Is There.
+    </template>
+  </category>
+  <category>
+    <pattern>JOB PLACEMENT PROGRAMS</pattern>
+    <template>
+      Pre-Placement Training Are Conducted As Well As Guest Lectures Are Arranged For Carrier Guidance
+    </template>
+  </category>
+  <category>
+    <pattern>JOB PLACEMENT PROGRAMS FOR STUDENTS</pattern>
+    <template>
+      Pre-Placement Training Are Conducted As Well As Guest Lectures Are Arranged For Carrier Guidance
+    </template>
+  </category>
+  <category>
+    <pattern>JOB PLACEMENT PROGRAMS ARE AVAILABLE FOR STUDENTS</pattern>
+    <template>
+      Pre-Placement Training Are Conducted As Well As Guest Lectures Are Arranged For Carrier Guidance
+    </template>
+  </category>
+  <category>
+    <pattern>COLLEGE STUDENTS LIVE ON-CAMPUS IN DORMS VERSUS OFF-CAMPUS IN APARTMENTS</pattern>
+    <template>
+      <![CDATA[
+        <html>
+        Many Students Are Placed In College More Than 40 Students Are Placed From Final Year Each Department
+        And Others Are Interested In Higher Education. Bharati Vidyapeeth Also Provide Mtech And Higher Education
+        Courses For More Information You Can Also Check Branch Of Management.
+        </html>
+      ]]>
+    </template>
+  </category>
+  <category>
+    <pattern>COLLEGE STUDENTS LIVE ON-CAMPUS IN DORMS VERSUS OFF-CAMPUS IN APARTMENTS</pattern>
+    <template>
+      <![CDATA[
+        <html>
+        Many Students Are Placed In College More Than 40 Students Are Placed From Final Year Each Department
+        And Others Are Interested In Higher Education. Bharati Vidyapeeth Also Provide Mtech And Higher Education
+        Courses For More Information You Can Also Check Branch Of Management.
+        </html>
+      ]]>
+    </template>
+  </category>
+  <category>
+    <pattern>ON-CAMPUS IN DORMS VERSUS OFF-CAMPUS IN APARTMENTS</pattern>
+    <template>
+      <![CDATA[
+        <html>
+        Many Students Are Placed In College More Than 40 Students Are Placed From Final Year Each Department
+        And Others Are Interested In Higher Education. Bharati Vidyapeeth Also Provide Mtech And Higher Education
+        Courses For More Information You Can Also Check Branch Of Management.
+        </html>
+      ]]>
+    </template>
+  </category>
+</aiml>

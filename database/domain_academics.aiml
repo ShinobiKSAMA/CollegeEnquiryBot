@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<aiml version="1.0">
+
+<meta name="language" content="en"/>
+  <category>
+    <pattern>HOD</pattern>
+    <template>
+      <![CDATA[
+        <html>
+        CSE: prof. Naresh Shende<br/>
+        IT: prof. Shweta Chachlani<br/>
+        EXTC: Prof. Kishor Jawalkar<br/>
+        Civil: prof. Milind Telawne<br/>
+        Mechanical: prof. Sandesh Bhadane<br/>
+        Electrical: prof. Rupali Firke<br/>
+        Automobile:prof. Shivaji Aher
+        </html>
+      ]]>
+    </template>
+  </category>
+  <category>
+    <pattern>HOD LIST</pattern>
+    <template>
+      <![CDATA[
+        <html>
+        CSE: prof. Naresh Shende<br/>
+        IT: prof. Shweta Chachlani<br/>
+        EXTC: Prof. Kishor Jawalkar<br/>
+        Civil: prof. Milind Telawne<br/>
+        Mechanical: prof. Sandesh Bhadane<br/>
+        Electrical: prof. Rupali Firke<br/>
+        Automobile:prof. Shivaji Aher
+        </html>
+      ]]>
+    </template>
+  </category>
+  <category>
+    <pattern>HOD OF CSE</pattern>
+    <template>prof. Naresh Shende</template>
+  </category>
+  <category>
+    <pattern>HOD OF COMUPTER SCIENCE ENGINEERING</pattern>
+    <template>prof. Naresh Shende</template>
+  </category>
+  <category>
+    <pattern>HOD OF COMUPTER ENGINEERING</pattern>
+    <template>prof. Naresh Shende</template>
+  </category>
+  <category>
+    <pattern>HOD OF COMPUTER ENGG</pattern>
+    <template>prof. Naresh Shende</template>
+  </category>
+  <category>
+    <pattern>HOD OF IT</pattern>
+    <template>prof. Shweta Chachalani</template>
+  </category>
+  <category>
+    <pattern>HOD OF INFORMATION TECHNOLOGY ENGINEERING</pattern>
+    <template>prof. Shweta Chachalani</template>
+  </category>
+  <category>
+    <pattern>HOD OF INFORMATION TECHNOLOGY</pattern>
+    <template>prof. Shweta Chachalani</template>
+  </category>
+  <category>
+    <pattern>HOD OF INFORMATION TECHNOLOGY ENGG</pattern>
+    <template>prof. Shweta Chachalani</template>
+  </category>
+  <category>
+    <pattern>HOD OF EXTC</pattern>
+    <template>Prof. Kishor Jawalkar</template>
+  </category>
+  <category>
+    <pattern>HOD OF ELECTRONICS AND TELECOMUNICATION ENGINEERING</pattern>
+    <template>Prof. Kishor Jawalkar</template>
+  </category>
+  <category>
+    <pattern>HOD OF ELECTRONICS AND TELECOMUNICATION</pattern>
+    <template>Prof. Kishor Jawalkar</template>
+  </category>
+  <category>
+    <pattern>HOD OF ELECTRONICS AND TELECOMUNICATION ENGG</pattern>
+    <template>Prof. Kishor Jawalkar</template>
+  </category>
+  <category>
+    <pattern>HOD OF CIVIL</pattern>
+    <template>prof. Milind Telawne</template>
+  </category>
+  <category>
+    <pattern>HOD OF CIVIL ENGG</pattern>
+    <template>prof. Milind Telawne</template>
+  </category>
+  <category>
+    <pattern>HOD OF AUTOMOBILE</pattern>
+    <template>Prof. Shivaji Aher</template>
+  </category>
+  <category>
+    <pattern>HOD OF AUTOMOBILE ENGG</pattern>
+    <template>Prof. Shivaji Aher</template>
+  </category>
+  <category>
+    <pattern>HOD OF AUTOMOBILE ENGINEERING</pattern>
+    <template>Prof. Shivaji Aher</template>
+  </category>
+  <category>
+    <pattern>HOD OF MECH</pattern>
+    <template>prof. Sandesh Bhadane</template>
+  </category>
+  <category>
+    <pattern>HOD OF MECHANICAL ENGINEERING</pattern>
+    <template>prof. Sandesh Bhadane</template>
+  </category>
+  <category>
+    <pattern>HOD OF MECHANICAL</pattern>
+    <template>prof. Sandesh Bhadane</template>
+  </category>
+  <category>
+    <pattern>HOD OF MECHANICAL ENGG</pattern>
+    <template>prof. Sandesh Bhadane</template>
+  </category>
+  <category>
+    <pattern>FACILITIES</pattern>
+    <template>
+      <![CDATA[
+        <html>
+        Library, IIT Remote Center, Hostel, Workshop,<br/>
+        Language laboratory, Exam Cell, NPTEL, NSS,<br/>
+        Cultural Cell and Much More
+        </html>
+      ]]>
+    </template>
+  </category>
+  <category>
+    <pattern>FACILITIES PROVIDED BY COLLEGE</pattern>
+    <template>
+      <![CDATA[
+        <html>
+        Library, IIT Remote Center, Hostel, Workshop,<br/>
+        Language laboratory, Exam Cell, NPTEL, NSS,<br/>
+        Cultural Cell and Much More
+        </html>
+      ]]>
+    </template>
+  </category>
+</aiml>
