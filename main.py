@@ -37,7 +37,7 @@ def login():
 				return redirect(url_for('bot'))
 			else:
 				msg = "Wrong Credentials"
-				return render_template("login.html", msg=msg)
+				return render_template("login.html")
 	except Exception as e:
 		return redirect(url_for('home'))
 	return render_template("login.html")
@@ -60,7 +60,7 @@ def register():
 				return render_template("login.html", msg=msg)
 	except Exception as e:
 		print(e)
-		return render_template("login.html", msg=msg)
+		return render_template("login.html")
 	return render_template("login.html")
 
 @app.route('/adm_Login', methods=['GET', 'POST'])
@@ -115,6 +115,7 @@ def bot():
 @app.route("/get")
 def get_bot_response():
 	userText = request.args.get('msg')
+	print(userText)
 	auth.add_msg(userText, session['user'], 0, mysql)
 	botText = str(b.start(userText, k))
 	auth.add_msg(botText, session['user'], 1, mysql)

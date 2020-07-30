@@ -1,50 +1,74 @@
 {% extends "default.html" %}
 
 {% block content %}
-    <div class="container">
-        <h1>Bharati Vidyapeeth College of Engineering</h1>
-        <div id="chatbox" class="msgBox">
-            <p class="botText">Hello! This is AM Bot</p>
-            {% for msg in chat %}
-            {% if msg[1]==0 %}
-            <p class="userText">{{ msg[0] }}</p>
-            {% else %}
-            <p class="botText">{{ msg[0] }}</p>
-            {% endif %}
-            {% endfor %}
+
+<div class="mesgs px-5">
+    <div class="msg_history">
+        {% for msg in chat %}
+        {% if msg[1]==0 %}
+        <div class="outgoing_msg">
+            <div class="sent_msg">
+                <p>{{ msg[0] }}</p>
+            </div>
         </div>
-        <div id="userInput">
-            <input id="textInput" class="textIn" type="text" name="msg" placeholder="Type Your Message Here">
-            <input id="send" class="sendMsg" type="submit" value="Send">
+        {% else %}
+        <div class="incoming_msg">
+            <div class="received_msg">
+                <div class="received_withd_msg">
+                    <p>{{ msg[0] }}</p>
+                </div>
+            </div>
         </div>
-        <script>
-        function getResponse() {
-            let userText = $("#textInput").val();
-            let userHtml = '<p class="userText">' + userText + '</p>';
-            $("#textInput").val("");
-            $("#chatbox").append(userHtml);
-            $("#chatbox").animate({
-                scrollTop: $('#chatbox')[0].scrollHeight - $('#chatbox')[0].clientHeight
-            });
-            $.get("/get", { msg: userText }).done(function(data) {
-                var botHtml = '<p class="botText">' + data + '</p>';
-                $("#chatbox").append(botHtml);
-                $("#chatbox").animate({
-                    scrollTop: $('#chatbox')[0].scrollHeight - $('#chatbox')[0].clientHeight
-                });
-            });
-        }
-        $("#textInput").keypress(function(e) {
-        //if enter key is pressed
-            if(e.which == 13) {
-                getResponse();
-            }
-        });
-        $("#send").click(function() {
-            getResponse();
-        });
-        </script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        {% endif %}
+        {% endfor %}
     </div>
+    <div class="type_msg">
+        <div class="input_msg_write">
+            <input type="text" class="write_msg" placeholder="Type a message" />
+            <button class="msg_send_btn" type="button"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+
+<script>
+    function getResponse() {
+        let userText = $(".write_msg").val();
+        let userHtml = '<div class="outgoing_msg"><div class="sent_msg"><p>' + userText + '</p></div></div>';
+        $(".write_msg").val("");
+        $(".msg_history").append(userHtml);
+        $(".msg_history").animate({
+            scrollTop: $('.msg_history')[0].scrollHeight - $('.msg_history')[0].clientHeight
+        });
+        console.log(userText);
+        $.get("/get", { msg: userText }).done(function (data) {
+            var botHtml = '<div class="incoming_msg"><div class="received_msg"><div class="received_withd_msg"><p>' + data + '</p></div></div></div>';
+            $(".msg_history").append(botHtml);
+            $(".msg_history").animate({
+                scrollTop: $('.msg_history')[0].scrollHeight - $('.msg_history')[0].clientHeight
+            });
+        });
+    }
+    $(".write_msg").keypress(function (e) {
+        //if enter key is pressed
+        if (e.which == 13) {
+            getResponse();
+        }
+    });
+    $("msg_send_btn").click(function () {
+        getResponse();
+    });
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
 {% endblock %}

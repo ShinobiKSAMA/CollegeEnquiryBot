@@ -1,100 +1,82 @@
-*, body {
-    margin: 0;
-    padding: 0;
-    font-family: Verdana, sans-serif;
-}
-
+*,
 body {
-    height: 100%;
-    background-image: url(../images/bg2.jpg);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-color: #EEFFF9;
-    background-position: center;
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, sans-serif;
+}
+.received_msg {
+  display: inline-block;
+  padding: 0 0 0 10px;
+  vertical-align: top;
+  width: 92%;
+}
+.received_withd_msg p {
+  background: #ebebeb none repeat scroll 0 0;
+  border-radius: 3px;
+  color: #646464;
+  font-size: 14px;
+  margin: 0;
+  padding: 5px 10px 5px 12px;
+  width: 100%;
+}
+.time_date {
+  color: #747474;
+  display: block;
+  font-size: 12px;
+  margin: 8px 0 0;
+}
+.received_withd_msg {
+  width: 57%;
+}
+.mesgs {
+  width: 100%;
 }
 
-a {
-    color: #ffffff;
+.sent_msg p {
+  background: #05728f none repeat scroll 0 0;
+  border-radius: 3px;
+  font-size: 14px;
+  margin: 0;
+  color: #fff;
+  padding: 5px 10px 5px 12px;
+  width: 100%;
+}
+.outgoing_msg {
+  overflow: hidden;
+  margin: 26px 0 26px;
+}
+.sent_msg {
+  float: right;
+  width: 46%;
+}
+.input_msg_write input {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border: medium none;
+  color: #4c4c4c;
+  font-size: 15px;
+  min-height: 48px;
+  width: 100%;
 }
 
-/*Container*/
-.container {
-    margin: 10px;
-    border: 1px solid #444444;
-    border-radius: 8px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 59px;
+.type_msg {
+  border-top: 1px solid #c4c4c4;
+  position: relative;
+}
+.msg_send_btn {
+  background: #05728f none repeat scroll 0 0;
+  border: medium none;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  font-size: 17px;
+  height: 33px;
+  position: absolute;
+  right: 0;
+  top: 11px;
+  width: 33px;
 }
 
-h1 {
-    padding: 8px;
-    text-align: center;
+.msg_history {
+  height: 516px;
+  overflow-y: auto;
 }
-/*Container*/
-
-/*Input and Send*/
-#userInput {
-    display: flex;
-    width: 100%;
-    padding: 8px;
-    box-sizing: border-box;
-    position: absolute;
-    bottom: 0;
-}
-
-.sendMsg, .textIn {
-    padding: 10px;
-    border: none;
-}
-
-.sendMsg {
-    color: #fff;
-    background-color: green;
-    font-weight: bold;
-    border-bottom-right-radius: 8px;
-}
-
-.textIn {
-    padding-left: 25px;
-    width: 100%;
-    border-bottom-left-radius: 8px;
-}
-/*Input and Send*/
-
-/*Message Box*/
-.msgBox {
-    padding-top: 25px;
-    overflow: scroll;
-    overflow-x: hidden;
-    position: absolute;
-    border-top: 1px solid #444444;
-    width: 100%;
-    bottom: 70px;
-    top: 70px;
-}
-
-.botText, .userText {
-    padding: 10px;
-    border: none;
-    margin-bottom: 10px;
-    font-weight: bold;
-    color: #ffffff;
-    max-width: max-content;
-    text-align: justify;
-}
-
-.botText {
-    margin-right: auto;
-    border-radius: 0 8px 8px 0;
-    background-color: #444444;
-}
-
-.userText {
-    margin-left: auto;
-    border-radius: 8px 0 0 8px;
-    background-color: green;
-}
-/*Message Box*/
