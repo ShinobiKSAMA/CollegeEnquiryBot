@@ -71,7 +71,7 @@ class Kernel:
 
         # Set up the bot predicates
         self._botPredicates = {}
-        self.setBotPredicate("name", "P8-BOT")
+        self.setBotPredicate("name", "Enquiry Chat-Bot")
         # setting botmaster
         self.setBotPredicate("botmaster","botmaster")
         # setting other bot attributes
