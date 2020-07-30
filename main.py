@@ -11,10 +11,10 @@ app.secret_key = os.urandom(24)
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = ''
-app.config['MYSQL_DB'] = 'ssjp2'
+app.config['MYSQL_DB'] = 'EnqChatBot'
 
 mysql = MySQL(app)
-botName = "AM-Bot"
+botName = "Enquiry Chat-Bot"
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
@@ -37,7 +37,7 @@ def login():
 				return redirect(url_for('bot'))
 			else:
 				msg = "Wrong Credentials"
-				return render_template("login.html")
+				return render_template("login.html", msg=msg)
 	except Exception as e:
 		return redirect(url_for('home'))
 	return render_template("login.html")

@@ -10,7 +10,7 @@ sent_check = s.Sent_Similarity()
 
 userName = "Anonymous"
 user_auth_id=0
-GREETING = ['Hello! My name is P8-bot. I will try my best to provide you information related to our College!']
+GREETING = ['Hello! My name is Enquiry Chat-Bot. I will try my best to provide you information related to our College!']
 
 DEFAULT_RESPONSES = ["I did not get you! Pardon please!","I couldn't understand what you just said! Kindly rephrase"
 					 " what you said :-)" ]
